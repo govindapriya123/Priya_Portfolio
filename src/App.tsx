@@ -20,7 +20,6 @@ function App() {
     const navbar = document.getElementById("navBar");
     const list = navbar?.classList;
     if (!navBar.current?.contains(e.target as Node) && list?.contains("toggleSideBarOpen")) {
-      console.log("sedon", list?.contains("toggleSideBarOpen"));
       list?.add("toggleSideBarClose");
       list?.remove("toggleSideBarOpen");
     }
