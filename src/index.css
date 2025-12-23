@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    scroll-behavior: smooth;
+* {
+  scroll-behavior: smooth;
 }
+
+.toggleSideBarOpen {
+  width: 16rem !important;
+  transition: all ease-in-out 300ms;
+}
+.toggleSideBarClose {
+  width: 0rem ;
+  transition: all ease-in-out 300ms;
+
+}
+
+
