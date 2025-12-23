@@ -1,13 +1,23 @@
-import { Mail, Phone, Linkedin, Github, ArrowRight, Zap, Code2, Target, Star } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, ArrowRight, Zap, Code2, Target, Star } from "lucide-react";
+import AchievementItem from "./Components/Achievements";
+import ExperienceCard from "./Components/ExperienceCard";
+import NavLink from "./Components/NavLink";
+import ProjectCard from "./Components/ProjectCard";
+import SkillCategory from "./Components/Skills";
+import StatCard from "./Components/StatCard";
 
 function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <nav className="fixed left-0 top-0 h-screen w-64 bg-gradient-to-b from-slate-900 to-slate-950 border-r border-slate-800 p-8 z-40 max-md:hidden">
         <div className="mb-12">
-          <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg mb-4 flex items-center justify-center text-slate-950 font-bold text-lg">GK</div>
+          <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg mb-4 flex items-center justify-center text-slate-950 font-bold text-lg">
+            GK
+          </div>
           <h1 className="text-xl font-bold text-white mb-1">Govindapriya Korni</h1>
-          <p className="text-sm text-slate-400">Frontend Developer</p>
+          <p className="text-sm text-slate-400">
+            Frontend Developer | Mobile Application Developer | Full-Stack Developer
+          </p>
         </div>
 
         <div className="space-y-6">
@@ -19,20 +29,36 @@ function App() {
         </div>
 
         <div className="absolute bottom-8 left-8 right-8 space-y-3">
-          <a href="mailto:kornigovindapriya@gmail.com" className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition text-sm">
+          <a
+            href="mailto:kornigovindapriya@gmail.com"
+            className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition text-sm"
+          >
             <Mail size={16} /> Email
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition text-sm">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition text-sm"
+          >
             <Linkedin size={16} /> LinkedIn
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition text-sm">
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition text-sm"
+          >
             <Github size={16} /> GitHub
           </a>
         </div>
       </nav>
 
       <main className="md:ml-64">
-        <section id="intro" className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 relative overflow-hidden">
+        <section
+          id="intro"
+          className="min-h-screen flex items-center justify-center px-6 py-20 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 relative overflow-hidden"
+        >
           <div className="absolute inset-0 opacity-20">
             <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500 rounded-full mix-blend-screen filter blur-3xl"></div>
             <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl"></div>
@@ -46,18 +72,28 @@ function App() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Crafting Digital <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Experiences</span>
+              Crafting Digital{" "}
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Experiences
+              </span>
             </h1>
 
             <p className="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed">
-              Frontend Developer with 2 years of experience building scalable, responsive applications using React, React Native, and modern web technologies.
+              Senior Software Developer with 2+ years of experience building scalable, responsive applications using
+              React, React Native, and modern web technologies.
             </p>
 
             <div className="flex flex-wrap gap-4 justify-center mb-8">
-              <a href="#about" className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-slate-950 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition flex items-center gap-2">
+              <a
+                href="#about"
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-slate-950 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition flex items-center gap-2"
+              >
                 Explore My Work <ArrowRight size={18} />
               </a>
-              <a href="tel:+919441873930" className="px-6 py-3 border border-slate-700 rounded-lg hover:bg-slate-800 transition">
+              <a
+                href="tel:+919441873930"
+                className="px-6 py-3 border border-slate-700 rounded-lg hover:bg-slate-800 transition"
+              >
                 Get in Touch
               </a>
             </div>
@@ -76,10 +112,13 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-slate-300 leading-relaxed">
-                I'm a passionate Frontend Developer focused on creating elegant, performant solutions to complex problems. With expertise in React and React Native, I've built applications used by thousands of users.
+                I'm a passionate Frontend Developer focused on creating elegant, performant solutions to complex
+                problems. With expertise in React and React Native, I've built applications used by thousands of users.
               </p>
               <p className="text-slate-300 leading-relaxed">
-                Currently at HEXAGON, I lead frontend initiatives that improve application performance and user experience. I'm committed to writing clean, maintainable code and staying current with industry best practices.
+                Currently at HEXAGON, I lead frontend initiatives that improve application performance and user
+                experience. I'm committed to writing clean, maintainable code and staying current with industry best
+                practices.
               </p>
             </div>
 
@@ -103,7 +142,7 @@ function App() {
                 "Built responsive UIs for OnCall Dispatch and Mobile applications",
                 "Improved app performance by 30% through component optimization",
                 "Implemented Runtime Customization feature using JSON configuration",
-                "Migrated legacy codebase to functional components with React hooks"
+                "Migrated legacy codebase to functional components with React hooks",
               ]}
             />
 
@@ -114,7 +153,7 @@ function App() {
               achievements={[
                 "Mastered full-stack technologies: SQL, HTML, CSS, Java, JavaScript",
                 "Collaborated with senior engineers on enterprise best practices",
-                "Contributed to Git-based workflow and code maintainability"
+                "Contributed to Git-based workflow and code maintainability",
               ]}
             />
           </div>
@@ -128,14 +167,14 @@ function App() {
               title="CAFESTO"
               description="Food Ordering Web App"
               details="Responsive platform with Google & Facebook authentication, Stripe payments, and real-time order tracking."
-              techs={['React', 'Spring-Boot', 'Firebase', 'Stripe', 'SQL', 'JWT']}
+              techs={["React", "Spring-Boot", "Firebase", "Stripe", "SQL", "JWT"]}
             />
 
             <ProjectCard
               title="BLOGAPP"
               description="Mobile Blogging Platform"
               details="Feature-rich blogging app with secure authentication, blog management, and Spring Boot backend integration."
-              techs={['React-Native', 'Spring-boot', 'SQL', 'JWT']}
+              techs={["React-Native", "Spring-boot", "SQL", "JWT"]}
             />
           </div>
         </section>
@@ -144,18 +183,9 @@ function App() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">Technical Expertise</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <SkillCategory
-              category="Languages"
-              skills={['HTML', 'CSS', 'JavaScript', 'Java', 'TypeScript']}
-            />
-            <SkillCategory
-              category="Frontend"
-              skills={['React.js', 'React-Native', 'Redux']}
-            />
-            <SkillCategory
-              category="Backend & Tools"
-              skills={['Spring-boot', 'SQL', 'REST APIs', 'Firebase']}
-            />
+            <SkillCategory category="Languages" skills={["HTML", "CSS", "JavaScript", "Java", "TypeScript"]} />
+            <SkillCategory category="Frontend" skills={["React.js", "React-Native", "Redux"]} />
+            <SkillCategory category="Backend & Tools" skills={["Spring-boot", "SQL", "REST APIs", "Firebase"]} />
           </div>
         </section>
 
@@ -208,111 +238,26 @@ function App() {
               <a href="mailto:kornigovindapriya@gmail.com" className="text-slate-400 hover:text-cyan-400 transition">
                 <Mail size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-cyan-400 transition"
+              >
                 <Linkedin size={20} />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-cyan-400 transition"
+              >
                 <Github size={20} />
               </a>
             </div>
           </div>
         </footer>
       </main>
-    </div>
-  );
-}
-
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
-  return (
-    <a href={href} className="block text-slate-400 hover:text-cyan-400 transition font-medium text-sm">
-      {children}
-    </a>
-  );
-}
-
-function StatCard({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
-  return (
-    <div className={`p-6 rounded-lg border transition ${highlight ? 'bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/30' : 'bg-slate-900 border-slate-800 hover:border-slate-700'}`}>
-      <p className="text-slate-400 text-sm mb-2">{label}</p>
-      <p className={`text-3xl font-bold ${highlight ? 'text-cyan-400' : 'text-white'}`}>{value}</p>
-    </div>
-  );
-}
-
-function ExperienceCard({ title, company, date, achievements }: { title: string; company: string; date: string; achievements: string[] }) {
-  return (
-    <div className="bg-slate-900 border border-slate-800 rounded-lg p-8 hover:border-slate-700 transition">
-      <div className="flex justify-between items-start mb-4">
-        <div>
-          <h3 className="text-xl font-semibold text-white">{title}</h3>
-          <p className="text-cyan-400">{company}</p>
-        </div>
-        <span className="text-slate-500 text-sm">{date}</span>
-      </div>
-      <ul className="space-y-3">
-        {achievements.map((achievement, i) => (
-          <li key={i} className="flex gap-3 text-slate-300">
-            <span className="text-cyan-400 flex-shrink-0 mt-1">→</span>
-            <span>{achievement}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-function ProjectCard({ title, description, details, techs }: { title: string; description: string; details: string; techs: string[] }) {
-  return (
-    <div className="group bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-lg p-8 hover:border-cyan-500/50 transition overflow-hidden relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/10 group-hover:to-blue-500/10 transition opacity-0 group-hover:opacity-100"></div>
-
-      <div className="relative">
-        <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-        <p className="text-cyan-400 font-medium mb-4">{description}</p>
-        <p className="text-slate-300 mb-6">{details}</p>
-
-        <div className="flex flex-wrap gap-2">
-          {techs.map((tech) => (
-            <span key={tech} className="px-3 py-1 bg-slate-800 text-slate-300 rounded-full text-xs border border-slate-700">
-              {tech}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function SkillCategory({ category, skills }: { category: string; skills: string[] }) {
-  return (
-    <div className="bg-slate-900 border border-slate-800 rounded-lg p-6">
-      <h4 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-        <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-        {category}
-      </h4>
-      <div className="space-y-3">
-        {skills.map((skill) => (
-          <div key={skill} className="flex items-center gap-3">
-            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-            <span className="text-slate-300">{skill}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function AchievementItem({ icon, title, subtitle, description }: { icon: React.ReactNode; title: string; subtitle: string; description: string }) {
-  return (
-    <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 hover:border-slate-700 transition flex gap-4">
-      <div className="text-cyan-400 flex-shrink-0 mt-1">
-        {icon}
-      </div>
-      <div>
-        <h4 className="text-lg font-semibold text-white">{title}</h4>
-        <p className="text-sm text-slate-400 mb-2">{subtitle}</p>
-        <p className="text-slate-300 text-sm">{description}</p>
-      </div>
     </div>
   );
 }
