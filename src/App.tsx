@@ -19,7 +19,7 @@ function App() {
   const handleEvent = useCallback((e: Event) => {
     const navbar = document.getElementById("navBar");
     const list = navbar?.classList;
-    if (!navBar.current?.contains(e.target as Node) && list?.contains("toggleSideBarOpen")) {
+    if (!navBar.current?.contains(e.target as Node) && list?.contains("toggleSideBarOpen") && screen.width < 768) {
       list?.add("toggleSideBarClose");
       list?.remove("toggleSideBarOpen");
     }
@@ -30,11 +30,13 @@ function App() {
   const handleToggle = useCallback((e: { stopPropagation: () => void }) => {
     const navbar = document.getElementById("navBar");
     const list = navbar?.classList;
-    if (list?.contains("toggleSideBarOpen")) {
-      list.replace("toggleSideBarOpen", "toggleSideBarClose");
-    } else {
-      list?.add("toggleSideBarOpen");
-      list?.remove("toggleSideBarClose");
+    if (screen.width < 768) {
+      if (list?.contains("toggleSideBarOpen")) {
+        list.replace("toggleSideBarOpen", "toggleSideBarClose");
+      } else {
+        list?.add("toggleSideBarOpen");
+        list?.remove("toggleSideBarClose");
+      }
     }
   }, []);
   return (
