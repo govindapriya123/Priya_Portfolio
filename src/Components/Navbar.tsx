@@ -38,7 +38,7 @@ function Navbar({ navBar, handleToggle }: { navBar: RefObject<HTMLElement>; hand
           <Mail size={16} /> Email
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/korni-govindapriya"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition text-sm"
@@ -46,7 +46,7 @@ function Navbar({ navBar, handleToggle }: { navBar: RefObject<HTMLElement>; hand
           <Linkedin size={16} /> LinkedIn
         </a>
         <a
-          href="https://github.com"
+          href="https://github.com/govindapriya123"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 text-slate-400 hover:text-cyan-400 transition text-sm"

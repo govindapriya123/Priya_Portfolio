@@ -19,7 +19,7 @@ function App() {
   const handleEvent = useCallback((e: Event) => {
     const navbar = document.getElementById("navBar");
     const list = navbar?.classList;
-    if (!navBar.current?.contains(e.target as Node) && list?.contains("toggleSideBarOpen") && screen.width < 768) {
+    if (!navBar.current?.contains(e.target as Node) && list?.contains("toggleSideBarOpen") && window.innerWidth < 768) {
       list?.add("toggleSideBarClose");
       list?.remove("toggleSideBarOpen");
     }
@@ -27,10 +27,10 @@ function App() {
   /**
    *
    */
-  const handleToggle = useCallback((e: { stopPropagation: () => void }) => {
+  const handleToggle = (e: { stopPropagation: () => void }) => {
     const navbar = document.getElementById("navBar");
     const list = navbar?.classList;
-    if (screen.width < 768) {
+    if (window.innerWidth< 768) {
       if (list?.contains("toggleSideBarOpen")) {
         list.replace("toggleSideBarOpen", "toggleSideBarClose");
       } else {
@@ -38,7 +38,7 @@ function App() {
         list?.remove("toggleSideBarClose");
       }
     }
-  }, []);
+  }
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <Navbar navBar={navBar} handleToggle={handleToggle} />
@@ -182,7 +182,7 @@ function App() {
                 <Mail size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/korni-govindapriya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-cyan-400 transition"
@@ -190,7 +190,7 @@ function App() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/govindapriya123"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-cyan-400 transition"
